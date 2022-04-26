@@ -49,7 +49,7 @@ function InfluxDB (app) {
               })
           }, 5000)
         })
-    } else if (!_.isUndefined(this.retention) && retention != this.retention) {
+    } else if (!_.isUndefined(this.retention) && retention !== this.retention) {
       this.client.then(client => {
         this.setRetentionPolicy(client, retention)
       })

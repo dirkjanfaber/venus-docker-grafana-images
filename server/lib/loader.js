@@ -332,7 +332,7 @@ Loader.prototype.setupClient = function (client, address, portalInfos, isVrm) {
       })
     }
     if (!client.venusKeepAlive) {
-      this.logger.debug(`starting keep alive timer`)
+      this.logger.debug('starting keep alive timer')
       client.venusKeepAlive = setInterval(
         this.keepAlive.bind(this, client),
         keepAliveInterval * 1000
@@ -370,7 +370,7 @@ Loader.prototype.setupClient = function (client, address, portalInfos, isVrm) {
             )
           })
 
-          if (enabled.length == _.keys(this.vrmConnections).length) {
+          if (enabled.length === _.keys(this.vrmConnections).length) {
             this.logger.info('done trying vrm reconnect')
             clearInterval(this.vrmReconnectInterval)
             delete this.vrmReconnectInterval

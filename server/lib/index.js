@@ -34,7 +34,7 @@ function Server (opts) {
     if (
       !credentials ||
       compare(credentials.name, login.username) === false ||
-      compare(credentials.pass, login.password) == false
+      compare(credentials.pass, login.password) === false
     ) {
       res.statusCode = 401
       res.setHeader('WWW-Authenticate', 'Basic realm="example"')

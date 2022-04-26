@@ -91,7 +91,7 @@ module.exports = function (app) {
   })
 
   app.post('/admin-api/vrmLogout', (req, res, next) => {
-    logger.info(`logging out of VRM`)
+    logger.info('logging out of VRM')
 
     const scopy = JSON.parse(JSON.stringify(app.config.secrets))
     delete scopy.vrmToken
