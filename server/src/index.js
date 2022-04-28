@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { HashRouter, Route, Switch } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
@@ -141,7 +141,7 @@ ReactDOM.render(
   <HashRouter>
     <Switch>
       <Provider store={store}>
-        <Route path='/' name='Home' component={Full} />
+        <Route path='/' name='Home' element={<Full/>} />
       </Provider>
     </Switch>
   </HashRouter>,
